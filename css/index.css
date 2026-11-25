@@ -19,10 +19,6 @@ body {
     -webkit-user-drag: none;
 }
 
-body:not(.game-frame) #container {
-    display: none;
-}
-
 #players {
     position: fixed;
     inset: 0;
