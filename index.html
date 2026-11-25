@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Whirlybird</title>
     <link rel="stylesheet" href="css/index.css">
+    <script>
+        // Each game runs in its own document so its game state and touch input
+        // are independent from the other player's game.
+        if (new URLSearchParams(window.location.search).has("game")) {
+            document.documentElement.classList.add("game-frame");
+        }
+    </script>
 </head>
 <body>
 <div id="container"></div>
+<div id="players" aria-label="Two-player Whirlybird">
+    <iframe src="?game=player-1" title="Player 1 game" allow="gamepad"></iframe>
+    <iframe src="?game=player-2" title="Player 2 game" allow="gamepad"></iframe>
+</div>
 <script data-main="js/main.js" src="js/lib/require.min.js"></script>
 </body>
 </html>
