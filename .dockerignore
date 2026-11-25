@@ -1,9 +1,0 @@
-**/.DS_Store
-.idea
-.git
-.gitignore
-img/slice
-js/lib/require.js
-README.md
-Dockerfile
-.dockerignore
